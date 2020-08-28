@@ -4,18 +4,42 @@ let numbers = document.getElementById('numbers');
 let upperCase = document.getElementById('upper-case');
 let specialChar = document.getElementById('special-characters');
 
-length.addEventListener('input', () => {
-	console.log(length.value);
-});
+let form = document.getElementById('form');
 
-numbers.addEventListener('input', () => {
+const lowercaseList = arrayGenerator(97, 122);
+const uppercaseList = arrayGenerator(65, 90);
+const numbersList = arrayGenerator(48, 57);
+const symbolsList = arrayGenerator(33, 47).concat(arrayGenerator(58, 64)).concat(arrayGenerator(91, 96));
+
+form.addEventListener('submit', e => {
+	e.preventDefault();
+	//const password = generatePassword();
 	console.log(numbers.checked);
-});
-
-upperCase.addEventListener('input', () => {
 	console.log(upperCase.checked);
+
+	generatePassword();
 });
 
-specialChar.addEventListener('input', () => {
-	console.log(specialChar.checked);
-});
+function generatePassword() {
+	let allChar = lowercaseList;
+	if (numbers.checked) allChar = allChar.concat(numbersList);
+	if (upperCase.checked) allChar = allChar.concat(uppercaseList);
+	if (specialChar.checked) allChar = allChar.concat(symbolsList);
+	console.log(allChar);
+
+	let array = [];
+
+	for (let i = 0; i <= length.value; i++) {
+		array.push(String.fromCharCode(allChar[Math.floor(Math.random() * length.value)]));
+	}
+
+	console.log(array.join(''));
+}
+
+function arrayGenerator(low, high) {
+	const array = [];
+	for (let i = low; i <= high; i++) {
+		array.push(i);
+	}
+	return array;
+}
