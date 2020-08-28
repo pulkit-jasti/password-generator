@@ -13,14 +13,14 @@
 			<div class="main-wrapper">
 				<div class="title">Password Generator</div>
 				<div class="display-wrapper">
-					<input id="display" value="hel" class="display" />
+					<input id="display" class="display" placeholder="password" />
 					<button id="copy">
 						<img src="copy-icon.png" />
 					</button>
 				</div>
 				<form action="" id="form">
 					<label for="length">Password length</label>
-					<div class="fg"><input type="range" id="length" min="1" max="50" value="10" /></div>
+					<div><input type="range" id="length" min="1" max="50" value="0" /></div>
 
 					<label for="letters">Uppercase</label>
 					<div class="checkbox">
@@ -40,7 +40,7 @@
 						<label for="special-characters">Toggle</label>
 					</div>
 
-					<button type="submit" id="submit">Submit</button>
+					<button type="submit" id="submit">Generate Password</button>
 				</form>
 			</div>
 		</main>

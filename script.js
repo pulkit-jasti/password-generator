@@ -11,10 +11,14 @@ const uppercaseList = arrayGenerator(65, 90);
 const numbersList = arrayGenerator(48, 57);
 const symbolsList = arrayGenerator(33, 47).concat(arrayGenerator(58, 64)).concat(arrayGenerator(91, 96));
 
+let password = '';
+
 form.addEventListener('submit', e => {
 	e.preventDefault();
-	const password = generatePassword();
+	password = generatePassword();
 	document.getElementById('display').value = password;
+
+	copyToClipboard('hell its working');
 });
 
 function generatePassword() {
