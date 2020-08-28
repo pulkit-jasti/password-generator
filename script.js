@@ -21,6 +21,14 @@ form.addEventListener('submit', e => {
 	copyToClipboard('hell its working');
 });
 
+document.getElementById('copy').addEventListener('click', () => {
+	copyToClipboard(password);
+	document.getElementById('display').value = 'copied';
+	setTimeout(() => {
+		document.getElementById('display').value = password;
+	}, 2000);
+});
+
 function generatePassword() {
 	let allChar = lowercaseList;
 	if (numbers.checked) allChar = allChar.concat(numbersList);
@@ -44,4 +52,16 @@ function arrayGenerator(low, high) {
 		array.push(i);
 	}
 	return array;
+}
+
+function copyToClipboard(copyClip) {
+	const el = document.createElement('textarea');
+	el.value = copyClip;
+	el.setAttribute('readonly', '');
+	el.style.position = 'absolute';
+	el.style.left = '-9999px';
+	document.body.appendChild(el);
+	el.select();
+	document.execCommand('copy');
+	document.body.removeChild(el);
 }
