@@ -11,22 +11,35 @@
 	<body>
 		<main class="main-page">
 			<div class="main-wrapper">
+				<div class="title">Password Generator</div>
 				<div class="display-wrapper">
-					<div class="display">display</div>
-					<button id="copy">Copy</button>
+					<input class="display" />
+					<button id="copy">
+						<img src="copy-icon.png" />
+					</button>
 				</div>
 				<form action="">
 					<label for="length">Password length</label>
-					<input type="range" id="length" />
+					<div class="fg"><input type="range" id="length" min="1" max="50" value="1" /></div>
 
-					<label for="letters">Include Letters</label>
-					<input type="checkbox" id="letters" />
+					<label for="letters">Uppercase</label>
+					<div class="checkbox">
+						<input type="checkbox" id="switch" />
+						<label for="switch">Toggle</label>
+					</div>
+					<!--<input type="checkbox" id="letters" />-->
 
-					<label for="numbers">Include Numbers</label>
-					<input type="checkbox" id="numbers" />
+					<label>Numbers</label>
+					<div class="checkbox">
+						<input type="checkbox" id="numbers" />
+						<label for="numbers">Toggle</label>
+					</div>
 
-					<label for="special-chars">Include Special Characters</label>
-					<input type="checkbox" id="special-chars" />
+					<label for="special-chars">Special Characters</label>
+					<div class="checkbox">
+						<input type="checkbox" id="special-chars" />
+						<label for="special-chars">Toggle</label>
+					</div>
 
 					<button type="submit">Submit</button>
 				</form>
