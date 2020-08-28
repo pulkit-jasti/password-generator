@@ -1,7 +1,21 @@
-document.getElementById('switch').addEventListener('input', () => {
-	console.log(document.getElementById('switch').value);
+let length = document.getElementById('length');
+
+let numbers = document.getElementById('numbers');
+let upperCase = document.getElementById('upper-case');
+let specialChar = document.getElementById('special-characters');
+
+length.addEventListener('input', () => {
+	console.log(length.value);
 });
 
-document.getElementById('length').addEventListener('input', e => {
-	console.log(document.getElementById('length').value);
+numbers.addEventListener('input', () => {
+	console.log(numbers.checked);
+});
+
+upperCase.addEventListener('input', () => {
+	console.log(upperCase.checked);
+});
+
+specialChar.addEventListener('input', () => {
+	console.log(specialChar.checked);
 });
