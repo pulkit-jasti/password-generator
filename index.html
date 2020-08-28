@@ -9,38 +9,38 @@
 	</head>
 
 	<body>
-		<main class="main-page">
-			<div class="main-wrapper">
-				<div class="title">Password Generator</div>
+		<main class="main-page dark-bck">
+			<div class="main-wrapper dark-bck dark-border">
+				<div class="title dark-txt">Password Generator</div>
 				<div class="display-wrapper">
-					<input id="display" class="display" placeholder="password" />
-					<button id="copy">
+					<input id="display" class="display dark-txt dark-bck dark-border" placeholder="password" />
+					<button id="copy" class="dark-border">
 						<img src="copy-icon.png" />
 					</button>
 				</div>
-				<form action="" id="form">
-					<label for="length">Password length</label>
+				<form action="" id="form" class="dark-bck">
+					<label for="length" class="dark-txt">Password length</label>
 					<div><input type="range" id="length" min="1" max="50" value="0" /></div>
 
-					<label for="letters">Uppercase</label>
+					<label for="upper-case" class="dark-txt">Uppercase</label>
 					<div class="checkbox">
 						<input type="checkbox" id="upper-case" />
-						<label for="upper-case">Toggle</label>
+						<label for="upper-case" class="Switch">Toggle</label>
 					</div>
 
-					<label>Numbers</label>
+					<label for="numbers" class="dark-txt">Numbers</label>
 					<div class="checkbox">
 						<input type="checkbox" id="numbers" />
-						<label for="numbers">Toggle</label>
+						<label for="numbers" class="Switch">Toggle</label>
 					</div>
 
-					<label for="special-chars">Special Characters</label>
+					<label for="special-characters" class="dark-txt">Special Characters</label>
 					<div class="checkbox">
 						<input type="checkbox" id="special-characters" />
-						<label for="special-characters">Toggle</label>
+						<label for="special-characters" class="Switch">Toggle</label>
 					</div>
 
-					<button type="submit" id="submit">Generate Password</button>
+					<button type="submit" id="submit" class="dark-border">Generate Password</button>
 				</form>
 			</div>
 		</main>

@@ -65,3 +65,45 @@ function copyToClipboard(copyClip) {
 	document.execCommand('copy');
 	document.body.removeChild(el);
 }
+
+function darkMode() {
+	let bck = document.querySelectorAll('.dark-bck');
+	let txt = document.querySelectorAll('.dark-txt');
+	let border = document.querySelectorAll('.dark-border');
+	let Switch = document.querySelectorAll('.dark-switch');
+
+	for (let i = 0; i < bck.length; i++) {
+		bck[i].style.backgroundColor = '#343436';
+	}
+
+	for (i = 0; i < txt.length; i++) {
+		txt[i].style.color = '#fff';
+	}
+
+	for (i = 0; i < border.length; i++) {
+		border[i].style.borderColor = '#f8f8f8';
+	}
+
+	for (i = 0; i < Switch.length; i++) {
+		border[i].style.backgroundColor = '#f8f8f8 !important';
+	}
+}
+
+function lightMode() {
+	let bck = document.querySelectorAll('.dark-bck');
+	let txt = document.querySelectorAll('.dark-txt');
+	let border = document.querySelectorAll('.dark-border');
+	let Switch = document.querySelectorAll('.dark-switch');
+
+	for (let i = 0; i < bck.length; i++) {
+		bck[i].style.backgroundColor = '#f8f8f8';
+	}
+
+	for (i = 0; i < txt.length; i++) {
+		txt[i].style.color = '#343436';
+	}
+
+	for (i = 0; i < border.length; i++) {
+		border[i].style.borderColor = '#343436';
+	}
+}
