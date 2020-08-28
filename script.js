@@ -13,11 +13,8 @@ const symbolsList = arrayGenerator(33, 47).concat(arrayGenerator(58, 64)).concat
 
 form.addEventListener('submit', e => {
 	e.preventDefault();
-	//const password = generatePassword();
-	console.log(numbers.checked);
-	console.log(upperCase.checked);
-
-	generatePassword();
+	const password = generatePassword();
+	document.getElementById('display').value = password;
 });
 
 function generatePassword() {
@@ -25,15 +22,16 @@ function generatePassword() {
 	if (numbers.checked) allChar = allChar.concat(numbersList);
 	if (upperCase.checked) allChar = allChar.concat(uppercaseList);
 	if (specialChar.checked) allChar = allChar.concat(symbolsList);
-	console.log(allChar);
+	//console.log(allChar);
 
 	let array = [];
 
 	for (let i = 0; i <= length.value; i++) {
-		array.push(String.fromCharCode(allChar[Math.floor(Math.random() * length.value)]));
+		array.push(String.fromCharCode(allChar[Math.floor(Math.random() * allChar.length)]));
 	}
 
-	console.log(array.join(''));
+	//console.log(array.join(''));
+	return array.join('');
 }
 
 function arrayGenerator(low, high) {
