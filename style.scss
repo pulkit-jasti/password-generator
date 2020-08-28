@@ -36,10 +36,36 @@ main {
 	height: 100vh;
 	width: 100%;
 	background-color: lightcoral;
-}
+	@include flexcenter();
 
-.sample-page {
-	height: 100vh;
-	width: 100%;
-	background-color: lightblue;
+	.main-wrapper {
+		@include flexcenter();
+		flex-direction: column;
+		display: inline-block;
+
+		padding: 70px;
+		border-radius: 20px;
+
+		background-color: lightgreen;
+
+		.display-wrapper {
+			height: 50px;
+			//width: 200px;
+			background-color: lightblue;
+			@include flexcenter();
+
+			.display {
+				height: 100%;
+				width: 100%;
+				background-color: lightsalmon;
+			}
+		}
+
+		form {
+			background-color: lightseagreen;
+			display: grid;
+			grid-template-columns: auto auto;
+			gap: 20px;
+		}
+	}
 }

@@ -9,8 +9,29 @@
 	</head>
 
 	<body>
-		<main class="main-page"></main>
-		<section class="sample-page"></section>
+		<main class="main-page">
+			<div class="main-wrapper">
+				<div class="display-wrapper">
+					<div class="display">display</div>
+					<button id="copy">Copy</button>
+				</div>
+				<form action="">
+					<label for="length">Password length</label>
+					<input type="range" id="length" />
+
+					<label for="letters">Include Letters</label>
+					<input type="checkbox" id="letters" />
+
+					<label for="numbers">Include Numbers</label>
+					<input type="checkbox" id="numbers" />
+
+					<label for="special-chars">Include Special Characters</label>
+					<input type="checkbox" id="special-chars" />
+
+					<button type="submit">Submit</button>
+				</form>
+			</div>
+		</main>
 
 		<script src="script.js"></script>
 	</body>
