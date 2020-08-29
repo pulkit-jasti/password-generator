@@ -13,6 +13,10 @@ const symbolsList = arrayGenerator(33, 47).concat(arrayGenerator(58, 64)).concat
 
 let password = '';
 
+document.getElementById('length').addEventListener('input', () => {
+	document.getElementById('range-number').innerHTML = document.getElementById('length').value;
+});
+
 form.addEventListener('submit', e => {
 	e.preventDefault();
 	password = generatePassword();
@@ -70,7 +74,6 @@ function darkMode() {
 	let bck = document.querySelectorAll('.dark-bck');
 	let txt = document.querySelectorAll('.dark-txt');
 	let border = document.querySelectorAll('.dark-border');
-	let Switch = document.querySelectorAll('.dark-switch');
 
 	for (let i = 0; i < bck.length; i++) {
 		bck[i].style.backgroundColor = '#343436';
@@ -83,17 +86,12 @@ function darkMode() {
 	for (i = 0; i < border.length; i++) {
 		border[i].style.borderColor = '#f8f8f8';
 	}
-
-	for (i = 0; i < Switch.length; i++) {
-		border[i].style.backgroundColor = '#f8f8f8 !important';
-	}
 }
 
 function lightMode() {
 	let bck = document.querySelectorAll('.dark-bck');
 	let txt = document.querySelectorAll('.dark-txt');
 	let border = document.querySelectorAll('.dark-border');
-	let Switch = document.querySelectorAll('.dark-switch');
 
 	for (let i = 0; i < bck.length; i++) {
 		bck[i].style.backgroundColor = '#f8f8f8';
@@ -107,3 +105,7 @@ function lightMode() {
 		border[i].style.borderColor = '#343436';
 	}
 }
+
+document.getElementById('dark-mode-toggle').addEventListener('input', () => {
+	document.getElementById('dark-mode-toggle').checked ? darkMode() : lightMode();
+});

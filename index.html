@@ -10,6 +10,11 @@
 
 	<body>
 		<main class="main-page dark-bck">
+			<div class="dark-mode-btn checkbox">
+				<input type="checkbox" id="dark-mode-toggle" />
+				<label for="dark-mode-toggle" class="dark-switch">Toggle</label>
+				<p class="dark-txt">Dark Mode</p>
+			</div>
 			<div class="main-wrapper dark-bck dark-border">
 				<div class="title dark-txt">Password Generator</div>
 				<div class="display-wrapper">
@@ -20,24 +25,26 @@
 				</div>
 				<form action="" id="form" class="dark-bck">
 					<label for="length" class="dark-txt">Password length</label>
-					<div><input type="range" id="length" min="1" max="50" value="0" /></div>
+					<div class="range-wrapper">
+						<input type="range" id="length" min="1" max="50" value="0" /><span id="range-number" class="dark-txt">1</span>
+					</div>
 
 					<label for="upper-case" class="dark-txt">Uppercase</label>
 					<div class="checkbox">
 						<input type="checkbox" id="upper-case" />
-						<label for="upper-case" class="Switch">Toggle</label>
+						<label for="upper-case" class="dark-switch">Toggle</label>
 					</div>
 
 					<label for="numbers" class="dark-txt">Numbers</label>
 					<div class="checkbox">
 						<input type="checkbox" id="numbers" />
-						<label for="numbers" class="Switch">Toggle</label>
+						<label for="numbers" class="dark-switch">Toggle</label>
 					</div>
 
 					<label for="special-characters" class="dark-txt">Special Characters</label>
 					<div class="checkbox">
 						<input type="checkbox" id="special-characters" />
-						<label for="special-characters" class="Switch">Toggle</label>
+						<label for="special-characters" class="dark-switch">Toggle</label>
 					</div>
 
 					<button type="submit" id="submit" class="dark-border">Generate Password</button>
