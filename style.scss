@@ -166,7 +166,8 @@ main {
 				width: 20px;
 				height: 20px;
 				background-color: $gray;
-				border: 1.5px solid $gray;
+				border: 1.5px solid $silver;
+				border-radius: 0 !important;
 				cursor: pointer;
 			}
 
